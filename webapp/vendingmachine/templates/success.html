@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Transaction Successful</title>
+  <link rel="stylesheet" href="/webapp/vendingmachine/static/css/style.css">
+</head>
+<body class="success-body">
+  <div class="card">
+    <h1>✅ Transaction Complete!</h1>
+    <p>Thank you for your purchase.</p>
+
+    <div class="summary">
+      <p><strong>Item:</strong> {{ item.item_name }}</p>
+      <p><strong>Quantity:</strong> {{ quantity }}</p>
+      <p><strong>Total Cost:</strong> Rs{{ total_cost }}</p>
+      <p><strong>Change Returned:</strong> Rs{{ change }}</p>
+    </div>
+
+    <a href="/">Buy Another Item</a>
+  </div>
+</body>
+</html>
